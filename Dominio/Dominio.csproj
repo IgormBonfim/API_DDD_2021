@@ -5,9 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\Genericos\" />
-    <Folder Include="Interfaces\InterfaceServicos\" />
-    <Folder Include="Servicos\" />
+    <ProjectReference Include="..\Entidades\Entidades.csproj" />
   </ItemGroup>
 
 </Project>
