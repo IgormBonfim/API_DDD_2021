@@ -4,4 +4,10 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\Genericos\" />
+    <Folder Include="Interfaces\InterfaceServicos\" />
+    <Folder Include="Servicos\" />
+  </ItemGroup>
+
 </Project>
