@@ -40,6 +40,7 @@ namespace WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddCors();
             services.AddDbContext<Contexto>(options =>
              options.UseSqlServer(
                  Configuration.GetConnectionString("DefaultConnection")));
@@ -100,6 +101,10 @@ namespace WebAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            var urlFrontEnd = "https://localhost:4200";
+
+            app.UseCors(b => b.WithOrigins(urlFrontEnd));
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
